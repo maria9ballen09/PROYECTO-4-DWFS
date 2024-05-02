@@ -1,20 +1,22 @@
 const productsModel = require ('../models/products')
 
-const getProducts = () => {
+const getProducts = () => {     
     return productsModel
 }
 
+const getProduct = (id) => {
+    console.log(productsModel)
+    const product = productsModel.products.find(product => product.id === id)
+    return product
+}
+2
+const createProduct = (body) => {
+    nuevoProducto.id = products. length + 1
+    productsModel.products.push (nuevoProducto)
+    console.log(productsModel)
+    return productsModel
+}
 
-
-
-// app.get('/products', (req,res) => {
-//     res.json(menu)
-// })
-// app.get('/products/:id', (req, res) =>{
-//     const id = Number(req.params.id)
-//     const products = menu.find(products => products.id === id)
-//     res.json(products)
-// })
 
 // app.post ('/products', jsonParser,(req, res) =>{
 //     const nuevoProducto = req.body
@@ -42,6 +44,10 @@ const getProducts = () => {
 //     res.json({message: 'Este producto con el id: ${id} ${port} , fue eliminado', data:products})
 // })
 
-module.exports ={
-    getProducts
+module.exports = {
+    products,   
+    getProducts,
+    getProduct,
+    createProduct
+    
 }

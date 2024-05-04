@@ -5,7 +5,7 @@ const getProducts = () => {
 }
 
 const getProduct = (id) => {
-    // console.log(productsModel)
+    console.log(productsModel)
     const product = productsModel.products.find(product => product.id === id)
     return product
 }
